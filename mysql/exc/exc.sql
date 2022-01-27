@@ -9,6 +9,8 @@ create table member (
     id varchar(100),
     regdate datetime
 );
+desc book3;
+select * from book3;
 
 create table member2 (
 	seq int,
