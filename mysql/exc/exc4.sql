@@ -34,7 +34,7 @@ insert into review5 (
 	comment
     ,book5_no 
 ) values (
-	'우와 책 재미있습니다~'
+	'우와 책 재미있습니다~!'
     ,4
 );
 
