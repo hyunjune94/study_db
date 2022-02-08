@@ -62,11 +62,6 @@ CREATE TABLE IF NOT EXISTS `infrcodeGroup` (
   PRIMARY KEY (`code`))
 ENGINE = InnoDB;
 
-desc infrcodeGroup;
-desc infrcode;
-select * from infrcodeGroup;
-select * from infrcode;
-
 CREATE TABLE IF NOT EXISTS `infrcode` (
   `code` INT NOT NULL AUTO_INCREMENT,
   `infrcodeGroup_code` INT NOT NULL,
@@ -85,3 +80,26 @@ CREATE TABLE IF NOT EXISTS `infrcode` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
+
+desc infrcodeGroup;
+desc infrcode;
+select * from infrcodeGroup;
+select * from infrcode;
+
+insert into infrcodeGroup (
+	Phonenumber_usageCd
+    ,snsCd
+    ,cityCd
+    ,agreement_EmailMarketingCd
+    ,agreement_MobileMarketingCd
+    ,publisherCd
+    ,pw_QCd
+) values (
+	''
+    ,''
+    ,''
+    ,''
+    ,''
+    ,''
+    ,''
+);
