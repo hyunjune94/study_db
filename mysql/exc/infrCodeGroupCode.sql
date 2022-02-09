@@ -50,13 +50,20 @@ now(),
 select * from infrCode;
 
 select
-a.ifcgSeq
-,a.ifcgName
-,b.ifcdSeq
-,b.ifcdName
-,b.ifcdOrder
+	a.ifcgSeq
+	,a.ifcgName
+	,b.ifcdSeq
+	,b.ifcdName
+	,b.ifcdOrder
+	,b.ifcdUseNy
+	,b.ifcdDelNy
 from infrCodeGroup as a 
 	left join infrCode as b on b.infrCodeGroup_ifcgSeq = a.ifcgSeq
-    order by a.ifcgSeq, b.ifcdOrder;
-
-
+where 1=1
+	and a.ifcgDelNy=0
+    and a.ifcgUseNy=1
+    and b.ifcdDelNy=0
+    and b.ifcdUseNy=1
+order by 
+	a.ifcgSeq, 
+    b.ifcdOrder desc;
