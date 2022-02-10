@@ -29,3 +29,5 @@ CREATE TABLE IF NOT EXISTS `infrMemberNationality` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_unicode_ci;
+
+alter table infrMemberNationality add ifmnDefaultNy tinyint after ifmnSeq;

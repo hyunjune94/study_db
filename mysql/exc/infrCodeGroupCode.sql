@@ -1,3 +1,4 @@
+use nct;
 INSERT INTO `nct`.`infrcodegroup`
 (
 `ifcgName`,
@@ -20,6 +21,7 @@ now(),
 now()
 );
 
+select * from infrCode;
 select * from infrCodeGroup;
 
 INSERT INTO `nct`.`infrcode`
