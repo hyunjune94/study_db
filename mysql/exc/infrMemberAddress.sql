@@ -28,3 +28,39 @@ CREATE TABLE IF NOT EXISTS `infrMemberAddress` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_unicode_ci;
+
+select * from infrMemberAddress;
+
+insert into infrMemberAddress (
+	ifmaDefaultNy
+    ,ifmaTypeCd
+    ,ifmaTitle
+    ,ifmaAddress1
+    ,ifmaAddress2
+    ,ifmaZipCode
+    ,ifmaDelNy
+	,regDateTime
+    ,regDateTimeSvr
+    ,modDateTime
+    ,modDateTimeSvr
+    ,ifmmSeq
+) VALUES (
+	1
+    ,42
+    ,'강원도 인제군 기린면 101-702'
+    ,'강원도 인제군'
+    ,'기린면 101-702'
+    ,'98765'
+    ,0
+    ,now()
+    ,now()
+    ,now()
+    ,now()
+    ,2
+) ;
+
+
+update infrMemberAddress set
+	ifmaTitle="경기도 고양시 일산서구 주엽2동 202-1402"
+where 1=1
+	and ifmaSeq = 1;

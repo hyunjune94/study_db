@@ -27,3 +27,36 @@ CREATE TABLE IF NOT EXISTS `infrMemberAddressOnline` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_unicode_ci;
+
+select * from infrMemberAddressOnline;
+
+insert into infrMemberAddressOnline (
+	ifaoTypeCd
+    ,ifaoDefaultNy
+    ,ifaoSnsTypeCd
+    ,ifaoUrl
+    ,ifaoTitle
+    ,ifaoDelNy
+    ,regDateTime
+    ,regDateTimeSvr
+    ,modDateTime
+    ,modDateTimeSvr
+    ,ifmmSeq
+) values (
+	3
+    ,1
+    ,36
+    ,'www.twitter.com'
+    ,'twitter'
+    ,0
+    ,now()
+    ,now()
+    ,now()
+    ,now()
+    ,2
+);
+
+update infrMemberAddressOnline set
+	ifaoSnsTypeCd = '36'
+where 1=1
+	and ifaoseq = 2;
