@@ -70,3 +70,14 @@ where 1=1
 select * from infrAuthMenu;
 
 use nct;
+
+select
+	a.ifatSeq
+    ,(select ifatName from infrAuth where ifatSeq = a.ifatSeq) as ifatName
+	,a.ifmuSeq
+    ,(select ifmuName from infrMenu where ifmuSeq = a.ifmuSeq) as ifmuName
+	,a.ifatSeq
+    ,(select ifcdName from infrCode where ifcdSeq = a.ifauRoleCd) as ifauRoleName
+from infrAuthMenu as a
+	where 1=1
+		and a.ifatSeq = 1;

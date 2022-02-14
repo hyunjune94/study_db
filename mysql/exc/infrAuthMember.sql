@@ -60,3 +60,5 @@ now(),
 
 
 select * from infrAuthMember;
+
+alter table infrAuthMember add ifamDefaultNy tinyint after ifamSeq
