@@ -1,3 +1,5 @@
+use nct;
+
 INSERT INTO `nct`.`infrmember`
 (
 `ifmmAdminNy`,
@@ -97,8 +99,26 @@ select
     ,(select ifcdName from infrCode where ifcdSeq = c.ifaoSnsTypeCd) as ifaoSnsTypeName
     ,c.ifaoTitle
     ,c.ifaoUrl
+    ,d.ifmeTypecd
+    ,(select ifcdName from infrCode where ifcdSeq = d.ifmeTypeCd) as ifmeTypeName
+    ,d.ifmeEmailFull
+    ,e.ifmpTypecd
+    ,(select ifcdName from infrCode where ifcdSeq = e.ifmpTypeCd) as ifmpTypeName
+    ,e.ifmpDeviceCd
+    ,(select ifcdName from infrCode where ifcdSeq = e.ifmpDeviceCd) as ifmpDeviceName
+    ,e.ifmpTelecomCd
+    ,(select ifcdName from infrCode where ifcdSeq = e.ifmpTelecomCd) as ifmpTelecomName
+    ,e.ifmpNumber
+    ,f.ifjqQuestionCd
+    ,(select ifcdName from infrCode where ifcdSeq = f.ifjqQuestionCd) as ifjqQuestionName
+    ,f.ifjqAnswer
 from infrMember as a
 	left join infrMemberAddress as b on b.ifmmSeq = a.ifmmSeq
 	left join infrMemberAddressOnline as c on c.ifmmSeq = a.ifmmSeq
+    left join infrMemberEmail as d on d.ifmmSeq = a.ifmmSeq
+    left join infrMemberPhone as e on e.ifmmSeq = a.ifmmSeq
+    left join infrMemberJoinQna as f on f.ifmmSeq = a.ifmmSeq
 where 1=1
 	and a.ifmmDelNy = 0
+    
+

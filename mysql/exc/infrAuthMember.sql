@@ -33,4 +33,30 @@ ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_unicode_ci;
 
+INSERT INTO `nct`.`infrauthmember`
+(
+`ifamUseNy`,
+`ifamOrder`,
+`ifamDelNy`,
+`regDateTime`,
+`regDateTimeSvr`,
+`modDateTime`,
+`modDateTimeSvr`,
+`ifatSeq`,
+`ifmmSeq`
+)
+VALUES
+(
+1,
+2,
+0,
+now(),
+now(),
+now(),
+now(),
+2,
+2
+);
+
+
 select * from infrAuthMember;
