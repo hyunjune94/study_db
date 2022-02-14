@@ -76,7 +76,7 @@ select
     ,(select ifatName from infrAuth where ifatSeq = a.ifatSeq) as ifatName
 	,a.ifmuSeq
     ,(select ifmuName from infrMenu where ifmuSeq = a.ifmuSeq) as ifmuName
-	,a.ifatSeq
+	,a.ifauSeq
     ,(select ifcdName from infrCode where ifcdSeq = a.ifauRoleCd) as ifauRoleName
 from infrAuthMenu as a
 	where 1=1
