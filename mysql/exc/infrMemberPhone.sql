@@ -27,3 +27,36 @@ CREATE TABLE IF NOT EXISTS `infrMemberPhone` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_unicode_ci;
+
+INSERT INTO `nct`.`infrmemberphone`
+(
+`ifmpDefaultNy`,
+`ifmpTypeCd`,
+`ifmpDeviceCd`,
+`ifmpTelecomCd`,
+`ifmpNumber`,
+`ifmpDelNy`,
+`regDateTime`,
+`regDateTimeSvr`,
+`modDateTime`,
+`modDateTimeSvr`,
+`ifmmSeq`
+)
+VALUES
+(
+1,
+22,
+26,
+28,
+'123-456',
+0,
+now(),
+now(),
+now(),
+now(),
+2
+);
+
+
+select * from infrmemberphone;
+

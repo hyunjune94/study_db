@@ -24,3 +24,36 @@ CREATE TABLE IF NOT EXISTS `infrMenu` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_unicode_ci;
+
+INSERT INTO `nct`.`infrmenu`
+(
+`ifmuAdminNy`,
+`ifmuName`,
+`ifmuUseNy`,
+`ifmuOrder`,
+`ifmuDelNy`,
+`regDateTime`,
+`regDateTimeSvr`,
+`modDateTime`,
+`modDateTimeSvr`
+)
+VALUES
+(
+1,
+'테스트관리',
+1,
+11,
+0,
+now(),
+now(),
+now(),
+now()
+);
+
+update infrMenu set
+	ifmuParents = 3
+	,ifmuDepth = 2
+where 1=1
+	and ifmuSeq = 10;
+
+select * from infrMenu;

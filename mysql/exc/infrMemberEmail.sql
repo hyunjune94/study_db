@@ -29,4 +29,36 @@ ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_unicode_ci;
 
+INSERT INTO `nct`.`infrmemberemail`
+(
+`ifmeDefaultNy`,
+`ifmeTypeCd`,
+`ifmeEmailFull`,
+`ifmeEmailAccount`,
+`ifmeEmailDomain`,
+`ifmeDomainCd`,
+`ifmeDelNy`,
+`regDateTime`,
+`regDateTimeSvr`,
+`modDateTime`,
+`modDateTimeSvr`,
+`ifmmSeq`
+)
+VALUES
+(
+1,
+15,
+'korea@daum.net',
+'korea',
+'@daume.net',
+18,
+0,
+now(),
+now(),
+now(),
+now(),
+2
+);
+
+
 select * from infrMemberEmail;

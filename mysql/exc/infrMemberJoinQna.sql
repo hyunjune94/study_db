@@ -24,3 +24,30 @@ CREATE TABLE IF NOT EXISTS `infrMemberJoinQna` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_unicode_ci;
+
+INSERT INTO `nct`.`infrmemberjoinqna`
+(
+`ifjqQuestionCd`,
+`ifjqAnswer`,
+`ifjqDelNy`,
+`regDateTime`,
+`regDateTimeSvr`,
+`modDateTime`,
+`modDateTimeSvr`,
+`ifmmSeq`
+)
+VALUES
+(
+45,
+'경기도 고양시',
+0,
+now(),
+now(),
+now(),
+now(),
+2
+);
+
+
+select * from infrMemberJoinQna;
+

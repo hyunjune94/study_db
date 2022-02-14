@@ -22,4 +22,30 @@ ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_unicode_ci;
 
+INSERT INTO `nct`.`infrauth`
+(
+`ifatAdminNy`,
+`ifatName`,
+`ifatUseNy`,
+`ifatOrder`,
+`ifatDelNy`,
+`regDateTime`,
+`regDateTimeSvr`,
+`modDateTime`,
+`modDateTimeSvr`
+)
+VALUES
+(
+1,
+'회원 관리자',
+1,
+3,
+0,
+now(),
+now(),
+now(),
+now()
+);
+
+
 select * from infrAuth;

@@ -33,3 +33,40 @@ CREATE TABLE IF NOT EXISTS `infrAuthMenu` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_unicode_ci;
+
+INSERT INTO `nct`.`infrauthmenu`
+(
+`ifauRoleCd`,
+`ifauUseNy`,
+`ifauOrder`,
+`ifauDelNy`,
+`regDateTime`,
+`regDateTimeSvr`,
+`modDateTime`,
+`modDateTimeSvr`,
+`ifatSeq`,
+`ifmuSeq`
+)
+VALUES
+(
+1,
+1,
+8,
+0,
+now(),
+now(),
+now(),
+now(),
+3,
+8
+);
+
+update infrAuthMenu set
+	ifauOrder = 9
+    ,ifmuSeq = 9
+where 1=1
+	and ifauSeq = 9;
+    
+select * from infrAuthMenu;
+
+use nct;
