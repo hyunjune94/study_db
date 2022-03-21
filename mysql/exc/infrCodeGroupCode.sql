@@ -67,5 +67,4 @@ where 1=1
     and b.ifcdDelNy=0
     and b.ifcdUseNy=1
 order by 
-	a.ifcgSeq, 
-    b.ifcdOrder desc;
+	a.ifcgSeq;
